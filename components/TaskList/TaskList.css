@@ -1,0 +1,31 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+}
+.list > *:first-child {
+    display:flex;
+    align-self: center;
+    justify-content: start;
+}
+.list > *:last-child {
+    display:flex;
+    align-self: center;
+    justify-content: end;
+    gap: 8px;
+}
+.list > *{
+    display:flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.list .head {
+    display: flex;
+    width: 75%;
+    align-self: center;
+    justify-content: space-between;
+}
+.list .head p {
+    font-weight: 600;
+}
