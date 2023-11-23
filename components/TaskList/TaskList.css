@@ -3,21 +3,15 @@
     flex-direction: column;
     place-self: center;
 }
-.list > *:first-child {
-    display:flex;
-    align-self: center;
-    justify-content: start;
+.list .separator-primary {
+    height: 0.5px;
+    background-color: rgb(38 38 38);
+    width: 75%
 }
-.list > *:last-child {
-    display:flex;
-    align-self: center;
-    justify-content: end;
-    gap: 8px;
-}
-.list > *{
-    display:flex;
-    align-self: center;
-    justify-content: center;
+.list .separator-secondary {
+    height: 0.1px;
+    background-color: #8d99ae;
+    width: 75%
 }
 
 .list .head {
@@ -26,6 +20,25 @@
     align-self: center;
     justify-content: space-between;
 }
-.list .head p {
+.list .head .field:first-child {
+    width: 100%;
+    display:flex;
+    align-self: center;
+    justify-content: start;
+}
+.list .head .field {
+    width: 100%;
+    display:flex;
+    align-self: center;
+    justify-content: center;
+}
+.list .head .field:last-child {
+    width: 100%;
+    display:flex;
+    align-self: center;
+    justify-content: end;
+    gap: 8px;
+}
+.list .head .field p {
     font-weight: 600;
 }

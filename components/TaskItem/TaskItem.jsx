@@ -14,7 +14,7 @@ export default function TaskItem({ setTasksForm, deleteTask, task, handleStatus 
         <p className='item-desc'>{task.desc}</p>
       </div>
       <div className="field">
-        <p className='item-status'>{task.isCompleted == true ? "Completada" : "Pendiente"} </p>
+        <p style={{backgroundColor: task.isCompleted ? "#4cc9f0" : "#ee9b00"}} className='item-status'>{task.isCompleted == true ? "Completada" : "Pendiente"} </p>
       </div>
       <div className="actions">
         <button onClick={() => deleteTask(task.id)}>Eliminar</button>

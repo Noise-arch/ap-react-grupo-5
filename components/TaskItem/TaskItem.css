@@ -27,6 +27,17 @@
     align-self: center;
     justify-content: center;
 }
+.item .field .item-status{
+    border-radius: 0.375rem;
+    padding: 8px
+}
+.item .actions{
+    width: 100%;
+    display:flex;
+    gap: 4px;
+    align-self: center;
+    justify-content: end;
+}
 
 .item p {
     word-break: break-all;

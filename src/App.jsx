@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react'
-
-import './App.css'
+import { useState } from 'react'
 import TaskList from '../components/TaskList/TaskList'
-import { v4 as uuidv4 } from 'uuid';
 import TaskForm from '../components/TaskForm/TaskForm'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './App.css'
 
 function App() {
   const [tasks, setTasks] = useState(localStorage.getItem("tasks") !== null ? JSON.parse(localStorage.getItem("tasks")) : [])
