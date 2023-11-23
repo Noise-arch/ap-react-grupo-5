@@ -10,7 +10,7 @@ export default function TaskForm({ editId, setTasks, tasks, setTasksForm }) {
   })
 
   const createTask = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     // Verifica que los campos no esten vacios
     if (task.title == "" || task.desc == "") return toast.error(`Campos vacíos.`, {
       position: "bottom-right",
@@ -74,7 +74,7 @@ export default function TaskForm({ editId, setTasks, tasks, setTasksForm }) {
       </div>
       <div className="formBox">
         <h2>Crear Tarea</h2>
-        <form className="form" onSubmit={(e) => createTask(e)}>
+        <form className="form">
           <div className="field">
             <label htmlFor="title">Titulo</label>
             <input defaultValue={task.title} onChange={(e) => setTask({ ...task, title: e.currentTarget.value })} type="text" name="title" id="title" />
@@ -83,7 +83,7 @@ export default function TaskForm({ editId, setTasks, tasks, setTasksForm }) {
             <label htmlFor="desc">Descripción</label>
             <textarea defaultValue={task.desc} onChange={(e) => setTask({ ...task, desc: e.currentTarget.value })} name="desc" id="desc" />
           </div>
-          <button>{editId !== undefined ? "Editar" : "Crear"}</button>
+          <button onClick={(e) => createTask(e)}>{editId !== undefined ? "Editar" : "Crear"}</button>
         </form>
       </div>
     </>

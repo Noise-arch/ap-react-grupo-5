@@ -39,7 +39,7 @@
     width: 100%;
 }
 .formBox textarea {
-    resize: vertical;
+    resize: none;
 }
 .formBox .form button {
     background-color: #e76f51;

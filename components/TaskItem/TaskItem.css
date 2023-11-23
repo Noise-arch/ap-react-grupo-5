@@ -29,6 +29,7 @@
 }
 .item .field .item-status{
     border-radius: 0.375rem;
+    font-size: 14px;
     padding: 8px
 }
 .item .actions{
