@@ -1,11 +1,10 @@
 import React from 'react'
 import "./TaskItem.css"
 
-export default function TaskItem({ deleteTask, task, handleStatus }) {
+export default function TaskItem({ setTasksForm, deleteTask, task, handleStatus }) {
   return (
     <div className='item'>
       <div className="field">
-
         <input className='checkbox' defaultChecked={task.isCompleted} onChange={(e) => handleStatus(e.target.checked, task.id)} type="checkbox" name="completed" id="completed" />
       </div>
       <div className="field">
@@ -19,7 +18,7 @@ export default function TaskItem({ deleteTask, task, handleStatus }) {
       </div>
       <div className="actions">
         <button onClick={() => deleteTask(task.id)}>Eliminar</button>
-        <button>Editar</button>
+        <button onClick={() => setTasksForm({isOpen: true, editId: task.id})}>Editar</button>
       </div>
     </div>
   )
