@@ -4,5 +4,3 @@ Integrantes
 - Miguel Acosta
 - Mateo Lucero
 - Matias Valtolina
-- Alan Morua
-- Nicolas Herner?
