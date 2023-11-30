@@ -15,6 +15,7 @@
     position: absolute;
     left: 25%;
     top: 25%;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -34,6 +35,9 @@
     width: 100%;
     gap: 5px;
 }
+.formBox .form .field input {
+    width: 100%;
+}
 .formBox h2 {
     margin: 0;
     height: 5rem;
@@ -42,7 +46,7 @@
 }
 .formBox textarea {
     resize: none;
-    
+    padding: 2 1 2 1;
 }
 .formBox .form button {
     background-color: #e76f51;
@@ -71,17 +75,14 @@
 
 
 @media (max-width: 768px) {
-.formBox{
-    width: 80%;
-    left: 1rem;
-}
-.formBox textarea {
-    width: 80%;
-    height: 30px;
-    margin-left: 30px;
-
-}
-
-
-
+    .formBox{
+        width: 80%;
+        left: 1rem;
+    }
+    .formBox textarea {
+        width: 80%;
+        height: 30px;
+        margin-left: 30px;
+        padding: 2 1 2 1;
+    }
 }

@@ -4,7 +4,7 @@ import "./TaskList.css"
 import { toast } from 'react-toastify'
 
 
-export default function TaskList({ setTasksForm, tasks, setTasks }) {
+export default function TaskList({ setTasksForm, tasks, searchedTasks, setTasks }) {
   const handleStatus = (bool, id) => {
     // Busca el index de la tarea segun id, crea una copia y modifica por el valor del estado en la copia del array
     const indexModTask = tasks.findIndex((task) => task.id == id)
@@ -49,16 +49,28 @@ export default function TaskList({ setTasksForm, tasks, setTasks }) {
       theme: "dark",
     });
   }
-  return (
-    <div className='list'>
-      
-      
-      {tasks.map((task, index) =>
-        <>
-          <TaskItem setTasksForm={setTasksForm} deleteTask={deleteTask} handleStatus={handleStatus} key={task.id} task={task} />
-          {index + 1 !== tasks.length && <hr className='separator-secondary' />}
-        </>
-      )}
-    </div>
-  )
+  console.log(tasks)
+  if (searchedTasks.length !== 0) {
+    return (
+      <div className='list'>
+        {searchedTasks.map((task, index) =>
+          <>
+            <TaskItem setTasksForm={setTasksForm} deleteTask={deleteTask} handleStatus={handleStatus} key={task.id} task={task} />
+            {/* {index + 1 !== tasks.length && <hr className='separator-secondary' />} */}
+          </>
+        )}
+      </div>
+    )
+  } else {
+    return (
+      <div className='list'>
+        {tasks.map((task, index) =>
+          <>
+            <TaskItem setTasksForm={setTasksForm} deleteTask={deleteTask} handleStatus={handleStatus} key={task.id} task={task} />
+            {/* {index + 1 !== tasks.length && <hr className='separator-secondary' />} */}
+          </>
+        )}
+      </div>
+    )
+  }
 }

@@ -3,6 +3,7 @@
     flex-direction: column;
     place-self: center;
     padding-top: 30px;
+    gap: 15px;
 }
 .list .separator-primary {
     height: 0.5px;
