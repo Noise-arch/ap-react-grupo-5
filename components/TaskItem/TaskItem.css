@@ -1,18 +1,20 @@
 .item {
-    display: flex;
-    width: 75%;
+    
     align-self: center;
-    justify-content: space-between;
+    height: 200px;
+    width: 60%;
+    border: 1px solid;
+    
 }
 .item .checkbox{
-    width: 15px;
-    height: 15px;
+    width: 1rem;
+    
 }
 .item .field:first-child {
     width: 100%;
     display:flex;
     align-self: center;
-    justify-content: start;
+   
 }
 .item .field:last-child {
     width: 100%;
@@ -35,12 +37,34 @@
 .item .actions{
     width: 100%;
     display:flex;
-    gap: 4px;
-    align-self: center;
-    justify-content: end;
+    justify-content: space-around;
+
+    
+    
 }
 
 .item p {
     word-break: break-all;
     overflow-wrap: break-word;
 }
+
+
+@media (max-width: 768px) {
+.item{
+    border: 2px solid;
+    width: 65%;
+}
+
+.item .actions{
+    width: 95%;
+    height: 30px;
+    justify-content: space-around;
+   
+    
+    
+}
+
+
+
+
+    }

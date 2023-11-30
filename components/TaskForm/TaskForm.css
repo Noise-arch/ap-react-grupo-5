@@ -36,10 +36,13 @@
 }
 .formBox h2 {
     margin: 0;
-    width: 100%;
+    height: 5rem;
+    
+    justify-content: center;
 }
 .formBox textarea {
     resize: none;
+    
 }
 .formBox .form button {
     background-color: #e76f51;
@@ -58,9 +61,27 @@
 }
 .formBox .form button:hover {
     background-color: transparent;
-    border-color: #e76f51;
+    border-color: #180f0d;
     border-width: 1px;
     border-style: solid;
     border-radius: 0.375rem;
     color: black; 
+}
+
+
+
+@media (max-width: 768px) {
+.formBox{
+    width: 80%;
+    left: 1rem;
+}
+.formBox textarea {
+    width: 80%;
+    height: 30px;
+    margin-left: 30px;
+
+}
+
+
+
 }

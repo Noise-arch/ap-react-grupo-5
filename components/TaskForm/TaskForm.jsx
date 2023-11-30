@@ -77,11 +77,11 @@ export default function TaskForm({ editId, setTasks, tasks, setTasksForm }) {
         <form className="form">
           <div className="field">
             <label htmlFor="title">Titulo</label>
-            <input defaultValue={task.title} onChange={(e) => setTask({ ...task, title: e.currentTarget.value })} type="text" name="title" id="title" />
+            <input  defaultValue={task.title} onChange={(e) => setTask({ ...task, title: e.currentTarget.value })} type="text" name="title" id="title" placeholder="Ingrese un Titulo"/>
           </div>
           <div className="field">
             <label htmlFor="desc">Descripción</label>
-            <textarea defaultValue={task.desc} onChange={(e) => setTask({ ...task, desc: e.currentTarget.value })} name="desc" id="desc" />
+            <textarea defaultValue={task.desc} onChange={(e) => setTask({ ...task, desc: e.currentTarget.value })} name="desc" id="desc" placeholder="Ingrese una Descripcion"/>
           </div>
           <button onClick={(e) => createTask(e)}>{editId !== undefined ? "Editar" : "Crear"}</button>
         </form>

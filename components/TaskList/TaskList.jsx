@@ -51,24 +51,8 @@ export default function TaskList({ setTasksForm, tasks, setTasks }) {
   }
   return (
     <div className='list'>
-      <div className='head'>
-        <div className="field">
-          <p className='item-title'>Completada?</p>
-        </div>
-        <div className="field">
-          <p className='item-title'>Título</p>
-        </div>
-        <div className="field">
-          <p className='item-desc'>Descripción</p>
-        </div>
-        <div className="field">
-          <p className='item-status'>Estado</p>
-        </div>
-        <div className="field">
-          <p className='item-status'>Acciones</p>
-        </div>
-      </div>
-      <hr className='separator-primary' />
+      
+      
       {tasks.map((task, index) =>
         <>
           <TaskItem setTasksForm={setTasksForm} deleteTask={deleteTask} handleStatus={handleStatus} key={task.id} task={task} />
